@@ -1,0 +1,210 @@
+/* 1. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e4e6eb;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* 2. Container Utama */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 950px;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 3. Sidebar */
+.sidebar {
+  width: 32%;
+  background: #1a375d;
+  color: #ffffff;
+  padding: 35px 25px;
+}
+
+.profile-frame {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.profile-frame img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  object-fit: cover;
+}
+
+.label-orange {
+  background: #f39c12;
+  padding: 8px;
+  margin: 25px 0 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efek saat kursor diarahkan */
+.label-orange:hover {
+  transform: translateX(8px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Teks Sidebar */
+.sidebar p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.sidebar ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f39c12;
+}
+
+/* 4. Main Content */
+.main-content {
+  width: 68%;
+  padding: 40px;
+}
+
+#judul-utama {
+  font-size: 2.2rem;
+  color: #1a375d;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.summary p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* ===== RIBBON BIRU (DATA PRIBADI, PENDIDIKAN, dll) ===== */
+.section-ribbon {
+  display: inline-block;
+  background-color: #1a375d;
+  color: white;
+  padding: 10px 35px 10px 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  position: relative;
+  margin: 30px 0 20px 0;
+  letter-spacing: 1px;
+}
+
+.section-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #1a375d;
+}
+
+.section-line {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1a375d;
+  border-bottom: 3px solid #f39c12;
+  padding-bottom: 5px;
+  margin: 30px 0 15px;
+}
+
+/* Tabel Data */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+table td {
+  padding: 6px 0;
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+table td:first-child {
+  width: 30%;
+  font-weight: 600;
+  color: #444;
+}
+
+table td:nth-child(2) {
+  width: 5%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .main-content {
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 25px;
+  }
+}
+
+.download-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#downloadBtn {
+  background-color: #1a375d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#downloadBtn:hover {
+  background-color: #f39c12;
+}
